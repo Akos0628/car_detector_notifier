@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 env:
-  DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-  DOCKER_HUB_KEY: ${{ secrets.DOCKER_KEY }}
+  DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+  DOCKER_HUB_KEY: ${{ secrets.DOCKER_HUB_KEY }}
   APP_VERSION: ${{ github.sha }}
   IMAGE_NAME: car-detector-notifier
 

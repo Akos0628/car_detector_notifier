@@ -1,1 +1,1 @@
-rootProject.name = "car_detector_notifier"
+rootProject.name = "car-detector-notifier"
