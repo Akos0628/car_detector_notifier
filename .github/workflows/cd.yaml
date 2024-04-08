@@ -9,7 +9,7 @@ on:
 
 env:
   DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
-  DOCKER_HUB_KEY: ${{ secrets.DOCKER_HUB_KEY }}
+  DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
   APP_VERSION: ${{ github.sha }}
   IMAGE_NAME: car-detector-notifier
 
