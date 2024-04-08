@@ -11,7 +11,6 @@ env:
   DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
   DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
   APP_VERSION: ${{ github.sha }}
-  IMAGE_NAME: car-detector-notifier
 
 jobs:
   build-and-deploy:
