@@ -1,7 +1,6 @@
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
-val app_name: String by project
 
 plugins {
     kotlin("jvm") version "1.9.23"
@@ -36,11 +35,11 @@ dependencies {
 ktor {
     docker {
         jreVersion.set(JavaVersion.VERSION_21)
-        localImageName.set(app_name)
+        localImageName.set("car-detector-notifier")
         imageTag.set(providers.environmentVariable("APP_VERSION"))
         externalRegistry.set(
             io.ktor.plugin.features.DockerImageRegistry.dockerHub(
-                appName = provider { app_name },
+                appName = provider { "car-detector-notifier" },
                 username = providers.environmentVariable("DOCKER_HUB_USERNAME"),
                 password = providers.environmentVariable("DOCKER_HUB_PASSWORD")
             )
