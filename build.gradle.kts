@@ -35,11 +35,11 @@ dependencies {
 ktor {
     docker {
         jreVersion.set(JavaVersion.VERSION_21)
-        localImageName.set("car-detector-notifier")
-        imageTag.set(providers.environmentVariable("APP_VERSION"))
+        localImageName.set(rootProject.name)
+        imageTag.set(System.getenv("APP_VERSION") ?: "latest")
         externalRegistry.set(
             io.ktor.plugin.features.DockerImageRegistry.dockerHub(
-                appName = provider { "car-detector-notifier" },
+                appName = provider { rootProject.name },
                 username = providers.environmentVariable("DOCKER_HUB_USERNAME"),
                 password = providers.environmentVariable("DOCKER_HUB_PASSWORD")
             )
